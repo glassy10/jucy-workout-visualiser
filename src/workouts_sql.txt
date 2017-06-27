@@ -1,0 +1,10 @@
+select exercise_sets.value, measure_units.unit,unit_types.desc,workouts.date as date,exercises.id,exercises.name,exercise_results.workout_id, exercise_results.id
+	from exercise_sets inner join measure_units on exercise_sets.measure_id = measure_units.id
+		inner join unit_types on measure_units.unit_id = unit_types.id
+		inner join exercise_results on exercise_sets.result_id = exercise_results.id
+		inner join workouts on exercise_results.workout_id = workouts.id
+		inner join exercises on exercise_results.exercise_id = exercises.id
+		--inner join workout_exercise_join on workouts.id = workout_exercise_join.workout_id
+		--where workouts.date = 1490718533359
+	where exercises.id = 98
+	order by date
