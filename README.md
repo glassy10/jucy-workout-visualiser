@@ -2,27 +2,15 @@
 
 > Gym session monitoring app for use with [Jucy](https://play.google.com/store/apps/details?id=com.sappadev.sappasportlog&hl=en_GB") back up files
 
-        <p>
-            <a href="https://play.google.com/store/apps/details?id=com.sappadev.sappasportlog&hl=en_GB">Jucy</a>
-            is an excellent android app for logging fitness workouts. It's
-            simple to set up and use in the gym and has no unnecessary
-            distractions.
-        </p>
-        <p>
-           However it doesn't provide much in the way of review and analysis
-           other than a simple line graph for each exercise showing reps and
-           weights.
-         </p>
-        <p>
-            Jucy records its data in a <a href="https://www.sqlite.org/">sqlite</a>
-            database file which can either be automatically backed up to Google
-            Drive or manually saved.
-        </p>
-        <p>
-           This site allows you to upload that file (which should have a
-           .backup extension) and create an in-depth analysis of your
-            workout history.
-        </p>
+        
+> [Jucy](https://play.google.com/store/apps/details?id=com.sappadev.sappasportlog&hl=en_GB") is an excellent android app for logging fitness workouts. It's simple to set up and use in the gym and has no unnecessary distractions.
+
+However it doesn't provide much in the way of review and analysis other than a simple line graph for each exercise showing reps and weights.
+
+Jucy records its data in a [sqlite](https://www.sqlite.org/) database file which can either be automatically backed up to Google Drive or manually saved.
+
+This site allows you to upload that file (which should have a .backup extension) and create an in-depth analysis of your workout history. The sqlite file is read by the [sql.js](https://github.com/kripken/sql.js/) utility
+        
 
 ## Build Setup
 
