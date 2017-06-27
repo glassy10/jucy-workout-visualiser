@@ -31,6 +31,9 @@
            Files are not permanently saved (they are removed as soon as you
            close the page) and are not personally identifiable.
         </p>
+        <p>
+          If you don't have a Jucy file available you can load a <a href="" @click.prevent="loadSampleFile()">sample file</a> to view the site.
+        </p>
 
       </div>
       <div class="col-md-6" style="text-align:center">
@@ -72,7 +75,16 @@ export default {
       Utilities.loadBinaryFile(vm.state.jucyFileURL, function (data) {
         //eslint-disable-next-line
         Store.setDbAction(new SQL.Database(data))
-        //console.log('loadjucyfile router push to home')
+        router.push({path: '/'})
+      })
+    },
+    loadSampleFile: function() {
+      var vm = this
+      vm.storingFile = true
+      Store.setJucyFileURLAction('../../static/2017-06-21_13-18-48.backup')
+      Utilities.loadBinaryFile(vm.state.jucyFileURL, function (data) {
+        //eslint-disable-next-line
+        Store.setDbAction(new SQL.Database(data))
         router.push({path: '/'})
       })
     }
